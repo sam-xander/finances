@@ -108,3 +108,27 @@ for (let i = 0; i < totalMonths - 1; i++) {
 }
 
 var avgChange = (totalOfChanges / (totalMonths - 1)).toFixed(2); // Sets to 2 decimal places
+
+// Greatest increase and decrease in profits
+var largest = finances[0][1];
+var smallest = finances[0][1];
+
+for (let i = 0; i < totalMonths - 1; i++) {
+  if (largest < finances[i + 1][1]) {
+    largest = finances[i][1];
+  }
+
+  if (smallest > finances[i + 1][1]) {
+    smallest = finances[i][1];
+  }
+}
+
+for (let i = 0; i < totalMonths; i++) {
+  if (finances[i].includes(largest)) {
+    var greatestProfit = `${finances[i][0]} ($${finances[i][1]})`;
+  }
+
+  if (finances[i].includes(smallest)) {
+    var greatestLoss = `${finances[i][0]} ($${finances[i][1]})`;
+  }
+}
