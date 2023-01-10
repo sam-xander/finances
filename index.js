@@ -89,3 +89,10 @@ var finances = [
 
 // Number of months in finances
 var totalMonths = finances.length;
+
+// Sum of the total profit/losses
+var sum = 0;
+
+for (let i = 0; i < totalMonths; i++) {
+  sum += finances[i][1];
+}
