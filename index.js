@@ -96,3 +96,15 @@ var sum = 0;
 for (let i = 0; i < totalMonths; i++) {
   sum += finances[i][1];
 }
+
+// Average of the changes in profit/loss over the entire period
+var change = 0,
+  totalOfChanges = 0,
+  numOfChanges = 0;
+
+for (let i = 0; i < totalMonths - 1; i++) {
+  change = finances[i + 1][1] - finances[i][1];
+  totalOfChanges += change;
+}
+
+var avgChange = (totalOfChanges / (totalMonths - 1)).toFixed(2); // Sets to 2 decimal places
