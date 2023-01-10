@@ -132,3 +132,11 @@ for (let i = 0; i < totalMonths; i++) {
     var greatestLoss = `${finances[i][0]} ($${finances[i][1]})`;
   }
 }
+
+// Logs
+console.log("Financial Analysis\n----------------------------");
+console.log(`Total Months: ${totalMonths}`);
+console.log(`Total: $${sum}`);
+console.log(`Average Change: $${avgChange}`);
+console.log(`Greatest Increase in Profits: ${greatestProfit}`);
+console.log(`Greatest Decrease in Profits: ${greatestLoss}`);
